@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="An interactive code compiler that teaches the importance of starting small in programming. Learn to code with Hello World!">
+    <title>World's Best Compiler - Start Small, Achieve Greatness </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>World's Best Compiler</h1>
+            <p class="tagline">Start small, achieve greatness</p>
+        </header>
+
+        <main>
+            <div class="editor-section">
+                <div class="controls">
+                    <label for="language-select">Choose Language:</label>
+                    <select id="language-select">
+                        <option value="python">Python</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="java">Java</option>
+                        <option value="cpp">C++</option>
+                        <option value="csharp">C#</option>
+                        <option value="ruby">Ruby</option>
+                        <option value="php">PHP</option>
+                        <option value="go">Go</option>
+                        <option value="rust">Rust</option>
+                    </select>
+                </div>
+
+                <div class="code-editor-wrapper">
+                    <textarea id="code-editor" placeholder='Enter your code here...'
+                        spellcheck="false">print("Hello World")</textarea>
+                </div>
+
+                <button id="run-btn" class="run-button">
+                    <span class="btn-text">▶ Run Code</span>
+                </button>
+            </div>
+
+            <div class="output-section">
+                <h2>Output</h2>
+                <div id="output-display" class="output-display">
+                    <p class="output-placeholder">Run your code to see the output...</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>💡 Tip: Every great programmer started with "Hello World"</p>
+            <button id="clear-particles-btn" class="clear-particles-btn" style="display: none;">Clear Particles
+                ✨</button>
+        </footer>
+    </div>
+
+    <!-- Blast Animation Container -->
+    <div id="blast-container" class="blast-container hidden">
+        <div class="blast-overlay"></div>
+        <div class="blast-content">
+            <div class="explosion-center">💥</div>
+            <div class="message-box">
+                <h2 class="blast-title">Whoa there! 🛑</h2>
+                <p class="blast-message" id="blast-message"></p>
+                <button id="close-blast" class="close-btn">Got it! Let's start small</button>
+            </div>
+        </div>
+        <div class="particles" id="particles"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
